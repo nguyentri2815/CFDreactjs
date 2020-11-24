@@ -1,0 +1,41 @@
+.sort{
+    padding-top: 100px ;
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-left{
+            select{
+                padding: 5px 15px;
+                border: none;
+                outline: none;
+                border: 1px solid #c5c5c5;
+            }
+        }
+        &-right{
+            display: flex;
+            .sort__product{
+                display: flex;
+                &-item{
+                    width: 40px;
+                    border-radius: 5px;
+                    height: 40px;
+                    border-radius: 5px;
+                    border: 1px solid #c5c5c5;
+                    margin-right: 10px;
+                }
+            }
+            .sort__select{
+                select{
+                    height: 40px;
+                    border-radius: 5px;
+                    padding-right: 25px;
+                    padding-left: 10px;
+                    border: none;
+                    outline: none;
+                    border: 1px solid #c5c5c5;
+                }
+            }
+        }
+    }
+}

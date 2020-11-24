@@ -1,0 +1,26 @@
+mixin box-thumb(linkimg,texth3,textp,nameauthor)
+    .box-thumb
+        .box-thumb__img
+            img.img(src=linkimg, alt="")
+            .box-thumb__overlay
+                .box-thumb__overlay-icon
+                    ul
+                        li
+                            img(src="./images/home/user.png", alt="")
+                            span 12
+                        li
+                            img(src="./images/home/heart.png", alt="")
+                            span 100
+                a(href="").box-thumb__viewmore
+                    img(src="./images/home/viewmore.svg", alt="")
+        .box-thumb__content
+            h3
+                a(href="")=texth3
+            p=textp
+        .box-thumb__author
+            .author
+                .author-img
+                    img(src="./images/home/avt.jpg", alt="")
+                h4=nameauthor
+            .author-btn
+                a(href="") Đăng ký

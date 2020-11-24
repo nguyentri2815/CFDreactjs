@@ -1,0 +1,69 @@
+//home-banner
+.home-banner{
+    &__content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        & h2{
+            font-size: 7rem;
+            line-height: 1.4;
+            margin-bottom: 1.7rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        & p{
+            font-size: 2.2rem;
+            margin-bottom: 4.8rem;
+        }
+    }
+    @include breakpoint(1439){
+        &__content{
+            & h2{
+                font-size: 6rem;
+                margin-bottom: 1.7rem;
+            }
+            & p{
+                font-size: 2rem;
+                margin-bottom: 4rem;
+            }
+        }
+    }
+    @include breakpoint(1023){
+        height: 90vh;
+        & img{
+            height: 100%;
+            object-fit: cover;
+        }
+        &__content{
+            & h2{
+                font-size: 5rem;
+                margin-bottom: 1.5rem;
+            }
+            & p{
+                font-size: 1.8rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    @include breakpoint(767){
+        &__content{
+            & h2{
+                font-size: 4rem;
+                margin-bottom: 1.5rem;
+                white-space: nowrap;
+            }
+            & p{
+                font-size: 1.6rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
+
+
+

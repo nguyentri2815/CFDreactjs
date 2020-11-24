@@ -1,0 +1,23 @@
+.home-course{
+    &__row{
+        & div[class*="col"]{
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__online{
+        padding-bottom: 5rem;
+    }
+    &__offline{
+        padding: 5rem 0;
+        background: #fff;
+        & .box-thumb{
+            
+            &__content{
+                background:#E5E5E5;
+            }
+            &__author{
+                background:#E5E5E5;
+            }
+        }
+    }
+}

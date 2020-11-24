@@ -1,0 +1,66 @@
+//home-about css
+.home-about{
+    padding-top: 3.3rem;
+    &__content{
+        max-width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        & p{
+            font-size: 2.8rem;
+            line-height: 1.67;
+            margin-bottom: 1.5rem;
+            color: #000;
+        }
+        & .line{
+            height: 10rem;
+            width: 2px;
+            background: #000;
+            margin: 0 auto;
+        }
+    }
+    @include breakpoint(1439){
+        &__content{
+            & p{
+                font-size: 2.6rem;
+                line-height: 1.67;
+                margin-bottom: 1.5rem;
+                color: #000;
+            }
+            & .line{
+                height: 10rem;
+                width: 2px;
+                background: #000;
+                margin: 0 auto;
+            }
+        }
+    }
+    @include breakpoint(1023){
+        &__content{
+            max-width: 85%;
+            & p{
+                font-size: 2rem;
+            }
+            & .line{
+                height: 8rem;
+            }
+        }
+    }
+    @include breakpoint(767){
+        &__content{
+            max-width: 100%;
+            & p{
+                font-size: 1.8rem;
+            }
+            & .line{
+                height: 6rem;
+            }
+        }
+    }
+    @include breakpoint(425){
+        &__content{
+            & p{
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.contact{
+    padding:  100px 0;
+    &__content{
+        &-item{
+            box-shadow: 1px 2px 3px #e2dfdf , -1px -2px 3px #e2dfdf ;
+            padding: 20px 0;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            .item{
+                &__logo{
+                    width: 80px;
+                    height: 80px;
+                    border: 1px solid #FF324D;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    position: relative;
+                    box-sizing: border-box;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 0px;
+                        height: 0px;
+                        border-radius: 50%;
+                        background-color: #FF324D;
+                        transition: 0.5s linear;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    &:hover{
+                        &::after{
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+                }
+                &__text{
+                    text-align: center;
+                    &-title{
+                        font-weight: 700;
+                        margin-top: 15px;
+                        margin-bottom: 5px;
+                    }
+                    &-desc{
+
+                    }
+                }
+            }
+        }
+    }
+}

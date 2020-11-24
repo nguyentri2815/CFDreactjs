@@ -1,0 +1,51 @@
+.blog{
+    padding-top: 100px;
+    padding-bottom: 20px;
+    &__content{
+        &-item{
+            margin-bottom: 30px;
+            &:hover{
+                .item{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            box-shadow: 1px 2px 3px #c5c5c5;
+            .item{
+                &__img{
+                    overflow: hidden;
+                    img{
+                        
+                        transition: 0.3s linear;
+                    }
+                    
+                }
+                &__text{
+                    padding: 20px;
+                    &-title{
+                        font-size: 1.4rem;
+                        line-height: 30px;
+                        &:hover{
+                            color:#FF324D ;
+                            cursor: pointer;
+                        }
+                    }
+                    &-desc{
+                        line-height: 30px;
+                    }
+                    &-info{
+                        margin: 15px 0;
+                        a{
+                            margin-right: 20px;
+                            i{
+                                margin-right: 3px;
+                                color: #FF324D;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

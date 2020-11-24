@@ -1,0 +1,244 @@
+
+.modal-product{
+    .modal-content{
+        padding: 50px ;
+        @include breakpoint(576){
+            padding: 0;
+        }
+        &.modal-content__product{
+            background: none;
+        }
+        &-item{
+            padding: 20px;
+            background: #ffffff;
+            position: relative;
+            .closeProduct{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 1.6rem;
+                color: #000000;
+                cursor: pointer;
+                @include breakpoint(660){
+                    right: 5;
+                    top: 5px;
+                }
+            }
+            .item{
+                &__img{
+                    @include breakpoint(660){
+                        margin-top: 25px;
+                    }
+                    img{
+                        padding: 5px;
+                        border: 1px solid #c5c5c5;
+                    }
+                    &-list{
+                        display: flex;
+                        margin-top: 20px;
+                        &__item{
+                            padding: 0 10px;
+                            img{
+                                padding: 5px ;
+                                border: 1px solid #FF324D;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                &__content{
+                    &-title{
+                        font-size: 1.6rem;
+                    }
+                    &-price{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        li{
+                            display: inline;
+                            color: #F6BC3E;
+                            font-size: 1rem;
+                        }
+                        span{
+                            margin-right: 10px;
+                        }
+                        &__sale{
+                            color: #FF324D;
+                            font-weight: 600;
+                            font-size: 1.4rem;
+                        }
+                        &__now{
+                            font-size: 1.1rem;
+                            text-decoration:line-through;
+                        }
+                        &__text{
+                            font-size: 1.1rem;
+                        }
+                    }
+                    &-color{
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        li{ 
+                            display: inline-block;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            background-color: red;
+                            border: none;
+                            cursor: pointer;
+                            margin-right: 5px;
+                            &.active{
+                                background-color: black;
+                                position: relative;
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    width: 19px;
+                                    height: 19px;
+                                    top: -2px;
+                                    left: -2px;
+                                    box-shadow: 1px 2px 3px #c5c5c5, -1px -2px 3px #c5c5c5;
+                                    border-radius: 50%;
+                                }
+                            }
+                            &.text{
+                                margin-right: 30px;
+                            }
+                        }
+                    }
+                    &-desc{
+                        margin-top: 10px;
+                        line-height: 30px;
+                    }
+                    &-recommend{
+                        margin-top: 20px;
+                        li{
+                            margin-top: 8px;
+                            i{
+                                color: #FF324D;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                    &-size{
+                        margin-top: 15px;
+                        li{ display: inline-block;
+                            width: 30px;
+                            height: 30px;
+                            border: 2px solid #c5c5c5;
+                            line-height: 30px;
+                            text-align: center;
+                            cursor: pointer;
+                            &.text{
+                                border: none;
+                                background: none;
+                                margin-right: 15px;
+                            }
+                            &.active{
+                                background-color: #FF324D;
+                                color: #ffffff;
+                                border: 2px solid #FF324D;
+                            }
+                        }
+                    }
+                    &-button{
+                        display: flex;
+                        align-items: center;
+                        margin-top: 20px;
+                        padding: 20px;
+                        border-top: 1px solid #c5c5c5;
+                        border-bottom: 1px solid #c5c5c5;
+                        &__add{
+                            padding: 12px 30px;
+                            color: #ffffff;
+                            background-color: #FF324D;
+                            display: inline-block;
+                            border-radius: 5px;
+                            border: 1px solid #FF324D;
+                            cursor: pointer;
+                            &:hover{
+                                color: #FF324D;
+                                background-color: #ffffff;
+                            }
+                        }
+                        &__share{
+                            font-size: 1.2rem;
+                            margin-left: 15px;
+                            &:hover{
+                                color: #FF324D;
+                                cursor: pointer;
+                            }
+                        }
+                        &__like{
+                            font-size: 1.2rem;
+                            margin-left: 15px;
+                            &:hover{
+                                color: #FF324D;
+                                cursor: pointer;
+                            }
+                        }
+                        &__quantity{
+                            margin-right: 20px;
+                            
+                            span{
+                                width: 35px;
+                                height: 35px;
+                                border-radius: 50%;
+                                background-color: #e6dede;
+                                display: inline-block;
+                                line-height: 35px;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 1.2rem;
+                                cursor: pointer;
+                            }
+                            input{
+                                max-width: 50px;
+                                height: 35px;
+                                margin: 0 10px;
+                                outline: none;
+                                text-align: center;
+                            }
+                        }
+                        @include breakpoint(660){
+                            flex-direction:  column;
+                            justify-content: center;
+                            &__quantity{
+                                margin-bottom: 10px;
+                            }
+                            &__share{
+                                margin: 10px 0;
+                            }
+                            &__like{
+                                margin: 0;
+                            }
+                        }
+                    }
+                    &-footer{
+                        margin-top: 20px;
+                        &__list{
+                            &-item{
+                                margin-bottom: 8px;
+                                strong{
+                                    font-weight: 400;
+                                    margin-left: 3px;
+                                }
+                            }
+                        }
+                    }
+                    &-social{
+                        margin-top: 15px;
+                        li{
+                            display: inline-block;
+                            margin-right: 25px;
+                            &:hover{
+                                color: #FF324D;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+    }
+}

@@ -1,0 +1,116 @@
+.product{
+    &__list{
+        &-item{
+            padding: 20px;
+            box-shadow: 1px 2px 3px #c5c5c5, -1px -2px 3px #c5c5c5;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            .item{
+                &__img{
+
+                }
+                &__content{
+                    &-title{
+                        font-size: 1.2rem;
+                    }
+                    &-price{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        li{
+                            display: inline;
+                            color: #F6BC3E;
+                            font-size: 0.8rem;
+                        }
+                        span{
+                            margin-right: 10px;
+                        }
+                        &__sale{
+                            color: #FF324D;
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                        }
+                        &__now{
+                            font-size: 0.9rem;
+                        }
+                        &__text{
+                            font-size: 0.9rem;
+                        }
+                    }
+                    &-color{
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        li{ 
+                            display: inline-block;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            background-color: red;
+                            border: none;
+                            cursor: pointer;
+                            margin-right: 5px;
+                            &.active{
+                                background-color: black;
+                                position: relative;
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    width: 19px;
+                                    height: 19px;
+                                    top: -2px;
+                                    left: -2px;
+                                    box-shadow: 1px 2px 3px #c5c5c5, -1px -2px 3px #c5c5c5;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                    &-desc{
+                        margin-top: 10px;
+                        line-height: 30px;
+                    }
+                    &-button{
+                        display: flex;
+                        align-items: center;
+                        &__add{
+                            padding: 12px 30px;
+                            color: #ffffff;
+                            background-color: #FF324D;
+                            display: inline-block;
+                            border-radius: 5px;
+                            border: 1px solid #FF324D;
+                            cursor: pointer;
+                            &:hover{
+                                color: #FF324D;
+                                background-color: #ffffff;
+                            }
+                        }
+                        &__share{
+                            font-size: 1.2rem;
+                            margin-left: 25px;
+                            &:hover{
+                                color: #FF324D;
+                                cursor: pointer;
+                            }
+                        }
+                        &__search{
+                            margin: 0 25px;
+                            font-size: 1.2rem;
+                            &:hover{
+                                color: #FF324D;
+                                cursor: pointer;
+                            }
+                        }
+                        &__like{
+                            font-size: 1.2rem;
+                            &:hover{
+                                color: #FF324D;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

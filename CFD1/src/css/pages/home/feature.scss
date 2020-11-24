@@ -1,0 +1,90 @@
+//start feature css
+.home-feature{
+    padding: 4rem 0;
+    background: #000;
+    color: #fff;
+    &__left{
+        & h3{
+            font-size: 5rem;
+            line-height: 1.4;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+            color: #fff;
+            & span{
+                color: $hoverColor;
+                margin-right: 1.5rem;
+            }
+        }
+        margin-bottom: 1.5rem;
+    }
+    &__img{
+        position: relative;
+        overflow: hidden;
+        & .img-trans{
+            position: absolute;
+            top: 37%;
+            left: 33%;
+        }
+    }
+    &__right{
+        & h4{
+            font-size: 2.2rem;
+            line-height: 1.4;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        & li{
+            margin-bottom: 3rem;
+        }
+    }
+    @include breakpoint(1439){
+        &__left{
+            & h3{
+                font-size: 4rem;
+            }
+        }
+        &__right{
+            & h4{
+                font-size: 2rem;
+            }
+        }
+    }
+    @include breakpoint(1023){
+        &__left{
+            & h3{
+                font-size: 3rem;
+            }
+        }
+        &__right{
+            & h4{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    @include breakpoint(767){
+        &__left{
+            & h3{
+                font-size: 2.5rem;
+            }
+        }
+        &__right{
+            & h4{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    @include breakpoint(424){
+        &__left{
+            & h3{
+                font-size: 2rem;
+            }
+        }
+        &__right{
+            & h4{
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

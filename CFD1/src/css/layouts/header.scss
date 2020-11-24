@@ -1,0 +1,128 @@
+//header css
+.header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#fff;
+    position: relative;
+    z-index: 999;
+    & a{
+        display: inline-block;
+        padding: 2.4rem 1.6rem;
+    }
+    &__bar{
+        & a{
+            border-right: 1px solid #ccc;
+            &:hover{
+                background: #e0e0e0;
+            }
+            & span{
+                margin-left: 1rem;
+            }
+        }
+    }
+    &__logo{
+        & a{
+            padding: 0;
+        }
+    }
+    
+    &__btn{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 15px;
+        &-login{
+            color: #000;
+            &:hover{
+                background: #e0e0e0;
+            }
+            
+        }
+        &-signup{
+            color: #fff;
+            background: $hoverColor;
+            &:hover{
+                background:$hoverbtn;
+                color: #fff;
+            }
+        }
+        
+    }
+    @include breakpoint(767){
+        justify-content: flex-start;
+        &__login{
+            display: none;
+        }
+        &__logo{
+            flex:1;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+.nav{
+    transition: 0.4s ease-in-out;
+    transform: translateX(-100%);
+    width: 32rem;
+    background: #fff;
+    height: 100%;
+    position: fixed;
+    top: 7rem;
+    left: 0;
+    z-index: 999;
+    &.active{
+        transform: translateX(0%);
+    }
+    & li{
+        &:first-child{
+            display: flex;
+            display: none;
+            & .nav-btn{
+                font-weight: 600;
+                &.btn-signup{
+                    border-left: 1px solid #ccc;
+                }
+                &:hover{
+                    color: $hoverColor;
+                }
+            }
+            @include breakpoint(767){
+                display: flex;
+            }
+        }
+        & a{
+            color: #000;
+            white-space: nowrap;
+            padding: 20px 35px;
+            justify-content: flex-start;
+            border-bottom: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            display: block;
+            text-transform: uppercase;
+            &:hover{
+                background: #e0e0e0;
+            }
+        }
+    }
+    
+}
+.overlay{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000;
+    opacity: 0.8;
+    visibility: hidden;
+    z-index: 90;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    cursor: pointer;
+    &.active{
+        visibility: visible;
+    }
+}

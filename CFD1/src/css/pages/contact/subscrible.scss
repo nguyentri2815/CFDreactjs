@@ -1,0 +1,35 @@
+.subscrible{
+    padding: 50px 0;
+    background-color: #FF324D;
+    @include breakpoint(576){
+        padding: 15px 0;
+    }
+    &__content{
+        &-text{
+            margin-bottom: 10px;
+            h3{
+                color: #ffffff;
+            }
+        }
+        &-form{
+            display: flex;
+            justify-content: center;
+            input{
+                height: 45px;
+                border: none;
+                outline: none;
+                width: 100%;
+                padding-left: 15px;
+                box-sizing: border-box;
+            }
+            button{
+                height: 45px;
+                border: none;
+                outline: none;
+                padding:  0 20px ;
+                background-color: black;
+                color: #ffffff;
+            }
+        }
+    }
+}

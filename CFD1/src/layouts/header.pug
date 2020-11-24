@@ -1,0 +1,48 @@
+//start header
+.header
+    .header__bar
+        a(href="" data-show="nav").show-content
+            img(src="./images/home/iconbar.svg", alt="")
+            span MENU
+    h1.header__logo
+        a(href="")
+            img(src="./images/home/logo.svg", alt="")
+    .header__login
+        a(href="" data-show="login").header__btn.header__btn-login.show-content đăng nhập
+        a(href="" data-show="login").header__btn.header__btn-signup.show-content đăng ký
+ul.nav#nav.modal
+    li
+        a(href="" data-show="login").nav-btn.btn-login.show-content đăng nhập
+        a(href="" data-show="login").nav-btn.btn-signup.show-content đăng ký
+    li
+        a(href="") trang chủ
+    li
+        a(href="") cfd team
+    li
+        a(href="") khóa học
+    li
+        a(href="") dự án
+    li
+        a(href="") liên hệ
+.modal#login
+    form.modal-form
+        .form-group
+            .close +
+            h3.form-title Đăng nhập
+            input.form-input(name='email' type='text' placeholder='Email')
+            input.form-input(name='email' type='text' placeholder='Mật khẩu')
+            .remember
+                .checkbox
+                    input#vehicle1(type='checkbox' name='vehicle1' value='Bike')
+                    label(for='vehicle1')  Nhớ mật khẩu
+                span.mess-error
+            a(href="").form-btn.form-btn-login ĐĂNG NHẬP
+            h4 hoặc đăng nhập bằng
+            a(href="").form-btn.form-btn-google
+                img(src="./images/home/google-symbol 1.svg", alt="")
+                | Google
+        
+            
+.overlay
+
+//end header

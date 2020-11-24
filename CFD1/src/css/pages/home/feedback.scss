@@ -1,0 +1,36 @@
+//home-feedback css
+.home-feedback{
+    padding: 5rem 0;
+    &__slide{
+        height: 50rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        & .slide-left{
+            // position: relative;
+            height: 100%;
+            &__item{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 70%;
+                background: #fff;
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+        }
+        & .slide-right{
+            // position: relative;
+            height: 100%;
+            &__item{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        & .slide-control{
+            position: absolute;
+        }
+    }
+}

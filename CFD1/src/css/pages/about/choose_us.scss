@@ -1,0 +1,41 @@
+.choose{
+    padding: 100px 0;
+    background-color: #F4F9FC;
+    &__heading{
+        text-align: center;
+        margin-bottom: 20px;
+        &-title{
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+    }
+    &__content{
+        &-item{
+            padding: 20px;
+            box-shadow: 1px 2px 3px #c5c5c5,-1px -2px 3px #c5c5c5;
+            background-color: #ffffff;
+            margin-bottom: 30px;
+            .item{
+                text-align: center;
+                &__logo{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: #FF324D;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                }
+                &__title{
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    color: #000000;
+                    margin-bottom: 6px;
+                }
+                &__desc{
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

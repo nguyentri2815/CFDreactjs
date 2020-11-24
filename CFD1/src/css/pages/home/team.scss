@@ -1,0 +1,17 @@
+//home-team css
+.home-team{
+    padding: 5rem 0;
+    background: #fff;
+    & .title{
+        margin-bottom: 5rem;
+    }
+    &__item{
+        transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        margin: 5px 0;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

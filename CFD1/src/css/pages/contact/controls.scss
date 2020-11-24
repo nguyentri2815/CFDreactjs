@@ -1,0 +1,29 @@
+.controls{
+    background-color: #F7F8FB;
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 70px 0;
+        
+        &-left{
+            h3{
+                font-weight: 700;
+            }
+        }
+        &-list{
+            li{
+                display: inline-block;
+                a{
+                    cursor: pointer;
+                    font-weight: 1.4rem;
+                    margin: 0 7px;
+                    color: #292B2C;
+                    &:hover{
+                        color: #FF324D;
+                    }
+                }
+            }
+        }
+    }
+}

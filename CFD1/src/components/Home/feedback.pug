@@ -1,0 +1,34 @@
+//- start feedback
+.home-feedback
+    .container
+        .home-feedback__title
+            +title('home','cảm nhận','thành viên')
+        .home-feedback__slide
+            .slide-left.col-md-7
+                .slide-left__item.active#text-1
+                    .slide-left__item-title
+                        .title-left
+                            h3 tiến tài
+                            span thành viên CFD1
+                        .title-right
+                            img(src="./images/home/rightquote.svg", alt="")
+                    p.slide-left__item-decs Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình front-end qua khóa học. Like cho 4 mentor.
+                .slide-left__item#text-2
+                    .slide-left__item-title
+                        .title-left
+                            h3 tiến tài 2
+                            span thành viên CFD2
+                        .title-right
+                            img(src="./images/home/rightquote.svg", alt="")
+                    p.slide-left__item-decs Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình front-end qua khóa học. Like cho 4 mentor.  
+            .slide-right.col-md-4.mgr-auto                
+                .slide-right__item.active(data-text='text-1')
+                    img(src="./images/home/Rectangle55.jpg", alt="")
+                .slide-right__item(data-text='text-2')
+                    img(src="./images/home/Rectangle55.jpg", alt="")
+            .slide-control
+                a(href="").bghover.btnprev
+                    i.fas.fa-angle-left
+                a(href="").bghover.btnNext
+                    i.fas.fa-angle-right
+//- end feedback

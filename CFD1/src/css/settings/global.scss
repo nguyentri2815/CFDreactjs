@@ -1,0 +1,64 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Avo;
+    src: url(.././font/SVN-Avo.ttf);
+}
+body {
+    background:#E5E5E5;
+    font-family: Avo;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    color: #8B9198;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #333333;
+    font-family: Avo;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s ease;
+    color: #000;
+    &:hover{
+        color: $hoverColor;
+    }
+}
+p{
+    font-size: 1.6rem;
+    line-height: 1.76;
+}
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 0;
+}
+
