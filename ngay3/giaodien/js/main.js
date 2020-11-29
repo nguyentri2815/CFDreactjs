@@ -61,14 +61,6 @@ document.addEventListener("DOMContentLoaded",function(){
         },
         clickBackTopTop:function(){
             var backToTop =document.getElementById('back-to-top');
-            // window.addEventListener('scroll',function(){
-            //     if (window.scrollY>400) {
-            //         backToTop.classList.add('active')
-            //     }
-            //     else{
-            //         backToTop.classList.remove('active')
-            //     }
-            // })
             backToTop.addEventListener('click',function(){
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                  return false;
@@ -76,40 +68,7 @@ document.addEventListener("DOMContentLoaded",function(){
         }
     }
     scrollTop.init()
-    // =====================================
-    // slide feedback=======> ko lam duoc
-    // const clickBTN={
-    //     init:function(){
-    //         this.clickButton()
-    //     },
-    //     clickButton:function(){
-    //         var elementBTN=document.querySelector('.slide-right');
-    //         console.log(elementBTN.children);
-    //         elementBTN.forEach(element => {
-    //             // element.addEventListener('click',function(){
-    //             //     console.log('click');
-    //             // })
-    //             // console.log(element);
-    //         });
-    //     }
-    // }
-    // clickBTN.init()
-    // ==============
-    // var elem = document.querySelector('.slide-right');
-    //     var flkty = new Flickity( elem, {
-    //     // options
-    //     cellAlign: 'left',
-    //     contain: true,
-    //     wrapAround: true
-    //     });
-
-    //     // element argument can be a selector string
-    //     //   for an individual element
-    //     var flkty = new Flickity( '.slide-right', {
-    //     // options
-    //     });
-    // =====================================
-    //tech
+// =========================
     const clickbtn = {
         init:function(){
             this.clickNext()

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		button{
+			width: 3rem;
+			height: 3rem;
+			background-color: rgb(176, 127, 255);
+		}
+	</style>
+</head>
+<body>
+	<h2>tăng giảm dung class</h2>
+	<h3 class="number"></h3>
+	<button class="increase">+</button>
+	<button class="decrease">-</button>
+	<button class="reset">reset</button>
+	<br>
+	<h2>tăng giảm biến cout dùng close</h2>
+	<h3>bien cout:</h3><p class="cout">0</p>
+	<button class="tang">+</button>
+	<button class="giam">-</button>
+</body>
+<script type="text/javascript">
+// BÀI 10
+// =====================================
+// bai viet ham filter2
+	const arrayvd=[1,2,3,4,5,6,7,8,9];
+	//lay ra so le
+	let odds = arrayvd.filter( e => e%2==0);
+	console.log("ket qua ham filter:" + odds);
+	const arrayvd2=[1,2,3,4,5,6,7,8,9];
+
+	// ======================================================
+	//  cách 1 : viết lại hàm filter dùng array.prototype
+	Array.prototype.filter2=function(callback){
+		let output=[];
+		for (const key in this) {
+			if (arrayvd2.hasOwnProperty(key)) {
+				let result= callback(this[key],key,this);
+				if(result){
+					output.push(this[key]);
+				}		
+			}
+		}
+		return output;
+	}
+	let odds2 = arrayvd2.filter2( e => e%2==0);
+	console.log("ket qua ham filter2 cách 1:" + odds2);
+
+	// ============================================
+	// cách 2 viết lại hàm filter dung difineProperty
+	Object.defineProperty(Array.prototype, 'filter22', {
+		value: function(callback){
+			let output=[];
+			for (const key in this) {
+				let result =callback(this[key],key,this);
+				if (result) {
+					output.push(this[key]);
+				}
+			}
+			return output;
+		}
+
+	});
+	let odds22 = arrayvd2.filter22( e => e%2==0);
+	console.log("ket qua ham filter22 cách 2:" + odds22);
+
+// BÀI 4
+// ====================================
+//bai tang giam 
+	class Rectangle {
+		constructor(){
+			this.count=0;
+		}
+	  	increase(){
+			  return this.count++;	
+	  	}
+	  	decrease(){
+			return this.count--;
+	  	}
+	  	reset(){
+			return this.count = 0;
+	 	}
+	}
+	let couter = new Rectangle
+	let increase = document.querySelector('.increase');
+	let decrease= document.querySelector('.decrease');
+	let elementh3 =document.querySelector('.number');
+	let elementreset =document.querySelector('.reset');
+	increase.addEventListener('click',function(){
+		elementh3.innerHTML=couter.increase();
+	})
+	decrease.addEventListener('click',function(){
+		elementh3.innerHTML=couter.decrease();
+	})
+	elementreset.addEventListener('click',function(){
+		elementh3.innerHTML=couter.reset();
+	})
+// BÀI 12
+// =========================================
+// tawbf giảm biến cout dùng closure
+	// function tanggiam(){
+	// 	this.cout=0;
+	// 	this.settang = function(){
+	// 		this.cout++;
+	// 	}
+	// 	this.setgiam= function(){
+	// 		this.cout--;
+	// 	}
+		
+	// };
+	// var coutt = new tanggiam();
+	// let elementcout=document.querySelector('.cout');
+	// let tang=document.querySelector('.tang').addEventListener('click',() => {
+	// 	coutt.settang()
+	// 	elementcout.innerHTML=coutt.cout;
+	// })
+	// let giam=document.querySelector('.giam').addEventListener('click',() =>{
+	// 	coutt.setgiam()
+	// 	elementcout.innerHTML=coutt.cout;
+	// })
+	function makeFunc() {
+		let cout = 0;
+		let elementcout=document.querySelector('.cout');
+		let tang=document.querySelector('.tang');
+		let giam=document.querySelector('.giam');
+		return {
+			tanggiam:function(){
+				tang.addEventListener('click',function(){
+					elementcout.innerHTML=++cout;
+					return cout;
+				})
+				giam.addEventListener('click',function(){
+					elementcout.innerHTML=--cout;
+					return cout;
+				})
+			}
+			
+		}
+	}
+	makeFunc().tanggiam()
+</script>
+</html>
+

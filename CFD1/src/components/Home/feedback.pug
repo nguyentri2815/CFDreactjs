@@ -4,7 +4,7 @@
         .home-feedback__title
             +title('home','cảm nhận','thành viên')
         .home-feedback__slide
-            .slide-left.col-md-7
+            .slide-left.col-xl-7.col-lg-6.col-md-6.col-sm-12.order-md-1.order-2
                 .slide-left__item.active#text-1
                     .slide-left__item-title
                         .title-left
@@ -12,7 +12,12 @@
                             span thành viên CFD1
                         .title-right
                             img(src="./images/home/rightquote.svg", alt="")
-                    p.slide-left__item-decs Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình front-end qua khóa học. Like cho 4 mentor.
+                    .slide-left__item-decs
+                        p Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình front-end qua khóa học. Like cho 4 mentor.
+                    .slide-left__item-info
+                        a(href="")
+                            img(src="./images/home/facebook.svg", alt="")
+                        span.date 02/10/2020
                 .slide-left__item#text-2
                     .slide-left__item-title
                         .title-left
@@ -20,15 +25,20 @@
                             span thành viên CFD2
                         .title-right
                             img(src="./images/home/rightquote.svg", alt="")
-                    p.slide-left__item-decs Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình front-end qua khóa học. Like cho 4 mentor.  
-            .slide-right.col-md-4.mgr-auto                
+                    .slide-left__item-decs 
+                        p Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình front-end qua khóa học. Like cho 4 mentor. 
+                    .slide-left__item-info
+                        a(href="")
+                            img(src="./images/home/facebook.svg", alt="")
+                        span.date 02/10/2020 
+            .slide-right.col-xl-4.col-lg-5.col-md-5.col-sm-12.order-md-2.order-1         
                 .slide-right__item.active(data-text='text-1')
                     img(src="./images/home/Rectangle55.jpg", alt="")
                 .slide-right__item(data-text='text-2')
                     img(src="./images/home/Rectangle55.jpg", alt="")
             .slide-control
                 a(href="").bghover.btnprev
-                    i.fas.fa-angle-left
+                    img(src="./images/home/arrowl.svg", alt="")
                 a(href="").bghover.btnNext
-                    i.fas.fa-angle-right
+                    img(src="./images/home/arrowr.svg", alt="")
 //- end feedback
